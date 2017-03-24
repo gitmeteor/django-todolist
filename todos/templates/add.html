@@ -1,0 +1,27 @@
+{% include 'partials/header.html' %}
+<div class="container">
+<form action='{% url 'add' %}' method="post">
+{% csrf_token %}
+    <!--
+    <label for="title">Title</label><br /> -->
+    <label>Title</label><br/>
+    <!-- for 属性规定 label 与哪个表单元素绑定。-->
+    <input type="text" name="title" id="title" />
+    <br>
+    <label for="text">Text</label><br />
+    <textarea class="materialize-textarea" name="text" id="text"></textarea>
+    <br><br>
+    <!--
+    <input class="btn" type="submit" value="submit" />
+    -->
+    <button class="btn" type="submit">Submit</button>
+</form>
+<br>
+</div>
+
+<a href="/todos"> Go Back </a>
+
+
+
+
+{% include 'partials/footer.html' %}
